@@ -10,7 +10,7 @@ module.exports = {
             const payload = {}
             const secret = process.env.ACCESS_TOKEN_SECRET
             const options = {
-                expiresIn: '1m',
+                expiresIn: '10m',
                 issuer: 'websitebuilder.com',
                 audience: userID
             }
