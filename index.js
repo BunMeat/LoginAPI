@@ -23,16 +23,6 @@ app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended: true})) //optional
 
-// const connectDB = async () => {
-//     try {
-//       const conn = await mongoose.connect(process.env.MONGO_URI);
-//       console.log(`MongoDB Connected: ${conn.connection.host}`);
-//     } catch (error) {
-//       console.log(error);
-//       process.exit(1);
-//     }
-// }
-
 const PORT = process.env.PORT || 3000
 
 app.get('/', verifyAccessToken, async(req, res, next) => {
